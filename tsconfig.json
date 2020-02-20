@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "target": "ES5",
+      "moduleResolution": "node",
+      "module": "esnext",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true
+    }
+}

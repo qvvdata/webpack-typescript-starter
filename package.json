@@ -1,0 +1,34 @@
+{
+  "author": "QVV Data",
+  "description": "A sample setup to get started developing front-end apps using typescript and webpack",
+  "license": "MIT",
+  "main": "src/Index.ts",
+  "name": "webpack-typescript-starter",
+  "sideEffects": [
+    "core-js/**/*",
+    "*.css",
+    "*.scss"
+  ],
+  "scripts": {
+    "dev": "rm -rf dist/* && webpack-dev-server --config webpack.dev.js",
+    "build": "rm -rf dist/* && webpack -p --display-modules --color --progress --config webpack.prod.js"
+  },
+  "version": "1.0.0",
+  "devDependencies": {
+    "copy-webpack-plugin": "^5.1.1",
+    "fork-ts-checker-webpack-plugin": "^4.0.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qvvdata/webpack-typescript-starter"
+  }
+}
