@@ -1,5 +1,6 @@
 const path = require('path');
 const common = require('./webpack.common.js');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const merge = require('webpack-merge');
 
 const config = {
@@ -23,6 +24,10 @@ const config = {
         hot: false
     },
     devtool: 'cheap-module-eval-source-map',
+    plugins: [
+        // Start TS typechecking in a separate process.
+        new ForkTsCheckerWebpackPlugin()
+    ]
 };
 
 module.exports = merge(common, config);

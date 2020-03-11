@@ -1,6 +1,5 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -97,9 +96,6 @@ module.exports = {
         extensions: ['.ts', '.tsx', '.js', '.jsx']
     },
     plugins: [
-        // Start TS typechecking in a separate process.
-        new ForkTsCheckerWebpackPlugin(),
-
         // Copy the index html so we can test the dist folder.
         new CopyWebpackPlugin([{ from: './src/html/index.html', to: 'index.html' }]),
     ]
